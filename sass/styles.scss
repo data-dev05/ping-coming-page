@@ -1,0 +1,131 @@
+@use "./variables" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: calc($body-font-size + 0.5vw);
+}
+
+body {
+    font-family: $family;
+    text-align: center;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+
+}
+
+main {
+    width: 90%;
+    max-width: 600px;
+
+    > p {
+        font-size: 0.6rem;
+        margin: 1rem 0;
+    }
+}
+
+#logo {
+    width: 3rem;
+    margin: 1.5rem 0;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: $gray;
+    font-weight: 300;
+}
+
+span {
+    font-weight: 700;
+    color: $very-dark-blue;
+}
+
+form {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    height: 100px;
+    
+    div {
+        flex: 2 1 300px;
+        display: flex;
+        flex-direction: column;
+
+        input {
+            padding: 0.5rem 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid $pale-blue;
+
+            &::placeholder {
+                color: $pale-blue;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    > input {
+        flex: 1 1 100px;
+        align-self: start;
+        padding: 0.5rem 1.5rem;
+        border-radius: 1rem;
+        background-color: $blue;
+        color: white;
+        border: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+#error-message {
+    font-size: 0.5rem;
+    font-style: italic;
+    color: $light-red;
+    padding: 0.3em 0 1em 0;
+    display: none;
+}
+
+footer {
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+
+    div {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        i {
+            font-size: 0.8rem;
+            color: $blue;
+            border: 1px solid $blue;
+            display: grid;
+            align-content: center;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    p {
+        font-size: 0.6rem;
+        color: $gray;
+    }
+}
